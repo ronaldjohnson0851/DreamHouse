@@ -29,7 +29,7 @@ public class Canvas
     public static Canvas getCanvas()
     {
         if(canvasSingleton == null) {
-            canvasSingleton = new Canvas("BlueJ Shapes Demo", 300, 300, 
+            canvasSingleton = new Canvas("BlueJ Shapes Demo", 500, 500,
                     Color.white);
         }
         canvasSingleton.setVisible(true);
@@ -137,6 +137,8 @@ public class Canvas
             graphic.setColor(Color.magenta);
         else if(colorString.equals("white"))
             graphic.setColor(Color.white);
+        else if(colorString.equals("gray"))
+            graphic.setColor(Color.gray);
         else
             graphic.setColor(Color.black);
     }
@@ -177,7 +179,7 @@ public class Canvas
     private void erase()
     {
         Color original = graphic.getColor();
-        graphic.setColor(backgroundColour);
+        graphic.setColor(Color.blue);
         Dimension size = canvas.getSize();
         graphic.fill(new Rectangle(0, 0, size.width, size.height));
         graphic.setColor(original);

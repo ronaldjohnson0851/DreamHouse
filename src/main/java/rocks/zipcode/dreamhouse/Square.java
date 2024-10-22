@@ -24,10 +24,11 @@ public class Square
     {
         size = 30;
         xPosition = 60;
-        yPosition = 50;
-        color = "red";
+        yPosition = 100;
+        color = "gray";
         isVisible = false;
     }
+
 
     /**
      * Make this square visible. If it was already visible, do nothing.
@@ -191,3 +192,4 @@ public class Square
         }
     }
 }
+
